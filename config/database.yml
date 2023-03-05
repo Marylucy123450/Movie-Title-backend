@@ -1,0 +1,15 @@
+default: &default
+  adapter: sqlite3
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/movies-dev.sqlite3
+
+production:
+  <<: *default
+  database: db/movies-prod.db
+
+test:
+  <<: *default
+  database: db/movies-test.sqlite3
